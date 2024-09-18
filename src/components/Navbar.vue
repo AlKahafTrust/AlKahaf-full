@@ -13,7 +13,7 @@ function toggleIcon(event){
 }
 
 function handleResize(){
-    if (document.documentElement.clientWidth > 786){
+    if (document.documentElement.clientWidth > 640){
     
     isMenuActive.value=true;
 
