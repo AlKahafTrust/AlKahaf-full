@@ -20,6 +20,7 @@ function handleResize(){
     }
 }
 onMounted(()=>{
+    handleResize();
     window.addEventListener('resize',handleResize)
 })
 
@@ -36,7 +37,7 @@ onMounted(()=>{
     </a>
 
     <div :class="[{ 'h-screen': isMenuActive },
-     'bg-secondary sm:h-fit text-xs font-bold  font-montserrat text-primary sm:text-l flex flex-col  self-start  sm:self-center' ]">
+     'bg-secondary sm:h-fit text-xs font-bold  font-montserrat text-primary sm:text-l flex flex-col self-start  sm:self-center justify-center ' ]">
               
             <button @click="toggleIcon" class="sm:hidden  self-center ">
                 
@@ -45,7 +46,7 @@ onMounted(()=>{
                 class="h-8 ">
             </button>
             <ul  :class="[{ 'hidden': !isMenuActive },
-    'flex flex-col  items-start px-6 pt-6 gap-4 sm:items-center sm:flex-row text-xs']" >
+    'flex flex-col  items-start px-6 pt-6 sm:pt-0 gap-4 sm:items-center sm:flex-row text-xs']" >
                 <li class="  "><a href="#">Home</a></li>
                 <li class=" "><a href="#">About Us</a></li>
                 <li class=" "><a href="#"></a>Contact Us</li>
